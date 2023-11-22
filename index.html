@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buurt initiatieven living styleguide</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Space Grotesk' rel='stylesheet'>
+  </head>
+  <body>
+    <main>
+        <section class="sidebar">
+            <ul>
+              <li><a href="#intro">Styleguide</a></li>
+              <li><a href="#colors">Colors</a></li>
+              <li><a href="#buttons">Buttons</a></li>
+            </ul>
+          </section>
+          <section class="styleguidecontent">
+        
+            <section id="intro">
+              <h2>Styleguide</h2>
+              <p>Op deze pagina is te zien hoe verschillende onderdelen van het project voor de hallen eruit zien.
+                 Op deze pagina wordt de huisstijl weergegeven.</p>
+            </section>
+        
+            <section id="colors">
+              <h2>Colors</h2>
+              <div class="color-box" style="--color: var(--background-light);">
+                <p>#fff</p>
+              </div>
+              <div class="color-box" style="--color:var(--accent-color-light);">
+                <p>#f6f6f2</p>
+              </div>
+              <div class="color-box" style="--color: var(--labels-color);">
+                <p>#c2edce</p>
+              </div>
+              <div class="color-box" style="--color: var(--primary-text-color);">
+                <p><span class="light-text">#388087</span></p>
+              </div>
+              <div class="color-box" style="--color: var(--primary-text-dark);">
+                <p><span class="light-text">#000</span></p>
+              </div>
+              <pre>
+                <code>
+                  :root {
+                    --primary-text-color: #388087;
+                    --primary-text-dark: #000;
+                    --background-light: #fff;
+                    --accent-color-light:#f6f6f2;
+                    --labels-color: #c2edce;
+                  }
+                </code>
+              </pre>
+              <pre>
+                <code>
+                  .sidebar {
+                    background-color: var(--primary-text-color);
+                  }
+                </code>
+              </pre>
+             </section>
+             <section id="buttons">
+                <h2>Buttons</h2>
+                <p> Met deze button kunnen mensen meer informatie krijgen over een buurt initiatief</p>
+                <a href="#" class="button link" target="_blank">Meer informatie</a>
+                <pre>
+                  <code>
+                    button{
+                        width: 15vw;
+                        background-color: var(--primary-text-color);
+                        color: var(--background-light);
+                        text-align: center;
+                        padding: 10px;
+                        text-decoration: none;
+                        transition: all 0.3s;
+                        border: none;
+                        position: relative;
+                        margin-top: 2vh;
+                      }
+                    
+                      button:hover{
+                        background-color: var(--accent-color-light);
+                        color: var(--primary-text-dark);
+                      }
+                  </code>
+                </pre>
+                <p> Met deze button kunnen mensen hun eigen initiatief opsturen</p>
+                <button onclick="sendContact();">Verstuur initiatief</button>
+                <pre>
+                  <code>
+                    .link {
+                        display: block;
+                        background-color: var(--primary-text-color);
+                        color: var(--background-light);
+                        text-align: center;
+                        padding: 10px;
+                        text-decoration: none;
+                        width: 100%;
+                      }
+                      
+                      .link:hover{
+                        background-color: var(--accent-color-light);
+                        color: var(--primary-text-dark);
+                      }
+                      
+                  </code>
+                </pre>
+              </section>
+        </section>
+    </main>
+</body>
+</html>
